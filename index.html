@@ -1,121 +1,111 @@
 <!doctype html>
 <html lang="ar" dir="rtl">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
-<meta name="theme-color" content="#050505">
-<title>LOKO — Gamer & Creator</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Orbitron:wght@600;700;800&display=swap" rel="stylesheet">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LOKO | Gaming</title>
+<meta name="description" content="LOKO Gaming — Free Fire, Kick and social links">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- صفحة الدخول بالفيديو -->
-<div id="intro" class="intro-screen">
+<!-- VIDEO ENTRY -->
+<section class="entry" id="entry">
   <video id="introVideo" autoplay muted playsinline preload="auto">
     <source src="assets/intro.mp4" type="video/mp4">
   </video>
-  <div class="intro-shade"></div>
-  <div class="intro-brand">LOKO</div>
-  <button id="skipIntro" class="skip-btn">دخول الموقع <span>↗</span></button>
-  <div class="intro-progress"><i></i></div>
-</div>
+  <div class="entryShade"></div>
+  <div class="entryCenter">
+    <div class="entryTitle">LOKO</div>
+    <div class="entryLine"></div>
+    <p>اضغط للمتابعة</p>
+  </div>
+  <button class="skip" id="skip">تخطي ↗</button>
+</section>
 
-<div id="website" class="website">
-  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+<div class="page" id="page">
   <div class="particles"></div>
 
   <header class="topbar">
-    <a class="logo-link" href="#top"><img src="assets/loko-logo.png" alt="LOKO"></a>
-    <nav class="nav-links">
-      <a class="active" href="#games"><span class="nav-icon">⌁</span> ألعابي</a>
-      <a href="#kick"><span class="nav-icon">K</span> كيك الخاص بي</a>
-      <a href="#contact"><span class="nav-icon">♧</span> تواصل معي</a>
-      <a href="#loko"><span class="nav-icon">◇</span> LOKO</a>
+    <a class="logoLink" href="#home"><img src="assets/loko-logo.jpg" alt="LOKO"></a>
+    <nav>
+      <a class="active" href="#games">🎮 <span>ألعابي</span></a>
+      <a href="#kick">▣ <span>كيك الخاص بي</span></a>
+      <a href="#contact">♧ <span>تواصل معي</span></a>
+      <a href="#loko">◇ <span>LOKO</span></a>
     </nav>
-    <button class="menu-btn" id="menuBtn" aria-label="القائمة">☰</button>
   </header>
 
-  <main id="top" class="container">
-    <section id="games" class="main-card game-section reveal">
-      <div class="corner-ribbon">الأولى</div>
-      <div class="card-heading">
-        <div class="heading-title"><span class="heading-icon">⌁</span><h1>ألعابي</h1></div>
-        <span class="small-label">GAME PROFILE</span>
-      </div>
+  <main id="home">
+
+    <!-- GAMES -->
+    <section id="games" class="panel games-panel">
+      <div class="ribbon">الأولى</div>
+      <div class="panel-title"><span>🎮</span> ألعابي</div>
       <div class="game-layout">
-        <div class="game-info">
-          <div class="freefire-word">FREE<span>F</span>IRE</div>
-          <div class="divider"></div>
-          <p class="game-description">حسابي في فري فاير ومعلومات اللاعب الخاصة بي.</p>
+        <div class="game-copy">
+          <div class="freefire">FREE<span>FIRE</span></div>
+          <div class="diamond"></div>
           <div class="uid-box">
-            <div class="uid-label"><span>▣</span> UID</div>
-            <strong id="uid">5177803934</strong>
-            <button id="copyUid" class="copy-btn" title="نسخ UID">⧉</button>
+            <div class="uid-label">🎮 &nbsp; UID</div>
+            <div class="uid-number" dir="ltr">5177803934</div>
+            <button id="copyUid" title="نسخ UID">⧉</button>
           </div>
-          <a class="outline-btn" href="https://ff.garena.com/" target="_blank" rel="noopener">♙ &nbsp; عرض الملف الشخصي</a>
+          <a class="outline-btn" href="https://ff.garena.com/" target="_blank" rel="noopener">👤 &nbsp; عرض الملف الشخصي</a>
         </div>
         <div class="game-photo">
-          <img src="assets/freefire.png" alt="حساب LOKO في Free Fire">
-          <div class="photo-glow"></div>
+          <img src="assets/freefire.jpg" alt="Free Fire profile">
         </div>
       </div>
     </section>
 
-    <section id="kick" class="main-card kick-section reveal">
-      <div class="card-heading">
-        <div class="heading-title"><span class="live-dot"></span><h2>كيك الخاص بي</h2></div>
-        <span class="live-pill">● مباشر الآن</span>
-      </div>
+    <!-- KICK -->
+    <section id="kick" class="panel kick-panel">
+      <div class="live"><i></i> مباشر الآن</div>
+      <div class="panel-title"><span class="green">●</span> كيك الخاص بي</div>
       <div class="kick-layout">
         <div class="kick-copy">
-          <div class="kick-word">KICK</div>
-          <p>تابعني على منصة كيك<br>بثوث مباشرة ومحتوى حصري!</p>
-          <a class="green-btn" href="https://kick.com/lkmxloko" target="_blank" rel="noopener">زيارة القناة <span>↗</span></a>
+          <div class="kickWord">KICK</div>
+          <p>تابعني مباشرة على منصة كيك<br>بثوث مباشرة ومحتوى حصري!</p>
+          <a class="green-btn" href="https://kick.com/lkmxloko" target="_blank" rel="noopener">زيارة القناة ↗</a>
         </div>
         <div class="kick-stage">
           <div class="kick-ring"><span>K</span></div>
-          <div class="stage-line"></div>
-          <div class="speaker s1"></div><div class="speaker s2"></div>
+          <div class="stage-floor"></div>
         </div>
-        <a class="kick-url" href="https://kick.com/lkmxloko" target="_blank" rel="noopener">kick.com/lkmxloko <span>↗</span></a>
+        <a class="kick-url" href="https://kick.com/lkmxloko" target="_blank" rel="noopener">kick.com/lkmxloko &nbsp; 🔗</a>
       </div>
     </section>
 
-    <section id="contact" class="contact-section reveal">
-      <div class="section-title"><span>✦</span><h2>تواصل معي</h2><span>✦</span></div>
+    <!-- CONTACT -->
+    <section id="contact" class="contact-section">
+      <div class="contact-title"><span>◇</span> تواصل معي <span>◇</span></div>
       <div class="social-grid">
-        <a class="social-card instagram" href="https://www.instagram.com/lo.kman_x?igsh=MWt6dWN4bGp1NHhxMg==" target="_blank" rel="noopener">
-          <div class="social-icon">◎</div><div class="social-text"><b>INSTAGRAM</b><small>تابعني على انستغرام</small></div><div class="social-arrow">↗</div>
-          <div class="handle">@lo.kman_x</div>
+        <a class="social instagram" href="https://www.instagram.com/lo.kman_x?igsh=MWt6dWN4bGp1NHhxMg==" target="_blank" rel="noopener">
+          <div class="social-icon">◎</div><div><b>INSTAGRAM</b><small>تابعني على انستغرام</small></div><span class="arrow">↗</span>
+          <div class="handle" dir="ltr">@lo.kman_x</div>
         </a>
-        <a class="social-card tiktok" href="https://www.tiktok.com/@slivax_king" target="_blank" rel="noopener">
-          <div class="social-icon">♪</div><div class="social-text"><b>TIKTOK</b><small>تابعني على تيك توك</small></div><div class="social-arrow">↗</div>
-          <div class="handle">@slivax_king</div>
+        <a class="social tiktok" href="https://www.tiktok.com/@slivax_king" target="_blank" rel="noopener">
+          <div class="social-icon">♪</div><div><b>TIKTOK</b><small>تابعني على تيك توك</small></div><span class="arrow">↗</span>
+          <div class="handle" dir="ltr">@slivax_king</div>
         </a>
-        <a class="social-card discord" href="https://discord.gg/DCj3EdQRT" target="_blank" rel="noopener">
-          <div class="social-icon">◉</div><div class="social-text"><b>DISCORD</b><small>انضم إلى سيرفر ديسكورد</small></div><div class="social-arrow">↗</div>
+        <a class="social discord" href="https://discord.gg/DCj3EdQRT" target="_blank" rel="noopener">
+          <div class="social-icon">☯</div><div><b>DISCORD</b><small>انضم إلى سيرفر ديسكورد</small></div><span class="arrow">↗</span>
           <div class="handle">انضم الآن</div>
         </a>
       </div>
     </section>
 
-    <section id="loko" class="logo-section reveal">
-      <div class="logo-frame">
-        <img src="assets/loko-footer.png" alt="LOKO">
-        <div class="logo-overlay">
-          <div class="crown">♛</div><div class="logo-name">LOKO</div><div class="logo-sub">★ L O K O ★</div>
-        </div>
-      </div>
+    <!-- LOKO -->
+    <section id="loko" class="loko-panel">
+      <img src="assets/loko-footer.jpg" alt="LOKO">
     </section>
   </main>
 
-  <footer><span>♛</span> © 2026 LOKO. جميع الحقوق محفوظة. <span>♛</span></footer>
+  <footer>♛ © 2026 LOKO. جميع الحقوق محفوظة.</footer>
 </div>
 
-<div id="toast" class="toast">تم نسخ UID ✓</div>
+<div class="toast" id="toast">تم نسخ UID ✓</div>
 <script src="script.js"></script>
 </body>
 </html>
