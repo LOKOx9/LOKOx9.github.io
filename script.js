@@ -1,1 +1,1 @@
-function copyUID(){navigator.clipboard.writeText("5177803934");const t=document.getElementById("toast");t.textContent="تم نسخ UID ✓";t.classList.add("show");setTimeout(()=>t.classList.remove("show"),1800)}
+document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',e=>{const el=document.querySelector(a.getAttribute('href'));if(el){e.preventDefault();el.scrollIntoView({behavior:"smooth"})}}));

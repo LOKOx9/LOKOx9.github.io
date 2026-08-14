@@ -3,78 +3,90 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>LOKO</title>
+<title>LOKO | Gaming & Bots</title>
 <link rel="stylesheet" href="style.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
-<div class="particles"></div>
+<div class="bg"></div>
 
-<header class="topbar">
-  <a class="brand" href="#home">LOKO<span>♛</span></a>
+<header>
+  <a class="logo" href="#top">LOKO</a>
   <nav>
-    <a class="active" href="#games">🎮 <span>ألعابي</span></a>
-    <a href="#kick">K <span>كيك الخاص بي</span></a>
-    <a href="#contact">♧ <span>تواصل معي</span></a>
-    <a href="#loko">◇ <span>LOKO</span></a>
+    <a class="active" href="#games">🎮 ألعابي</a>
+    <a href="#kick">🟢 كيك الخاص بي</a>
+    <a href="#contact">✈ تواصل معي</a>
+    <a href="#about">☆ عن LOKO</a>
   </nav>
+  <div class="socials">
+    <a href="https://www.instagram.com/lo.kman_x?igsh=MWt6dWN4bGp1NHhxMg==" target="_blank">◎</a>
+    <a href="https://www.tiktok.com/@slivax_king" target="_blank">♪</a>
+    <a href="https://discord.gg/DnHWxYscs" target="_blank">☯</a>
+  </div>
 </header>
 
-<main id="home">
-<section id="games" class="hero-card">
-  <div class="ribbon">الأولى</div>
-  <div class="game-info">
-    <h2>🎮 ألعابي</h2>
-    <h1>FREE FIRE</h1>
-    <div class="uid-box">
-      <span>🎮 UID</span>
-      <strong>5177803934</strong>
-      <button onclick="copyUID()">⧉</button>
+<main id="top">
+<section id="games" class="section">
+  <div class="title"><h1>ألعابي 🎮</h1><p>الألعاب التي ألعبها وأشارك محتواها بكل شغف ❤️</p></div>
+  <div class="games">
+    <article class="game cs">
+      <div class="game-img"><span>CS2</span></div>
+      <div class="game-body"><div class="tag">حروب</div><h2>Counter-Strike 2</h2><p>لعبة تصويب تنافسية جماعية تعتمد على المهارة والتخطيط والعمل الجماعي.</p><div class="buttons"><button>ⓘ معلومات</button><a href="https://store.steampowered.com/app/730/CounterStrike_2/" target="_blank">العب الآن ▷</a></div></div>
+    </article>
+    <article class="game val">
+      <div class="game-img"><span>VALORANT</span></div>
+      <div class="game-body"><div class="tag">حروب</div><h2>VALORANT</h2><p>لعبة تصويب تكتيكية تجمع بين الشخصيات والقدرات واللعب التنافسي.</p><div class="buttons"><button>ⓘ معلومات</button><a href="https://playvalorant.com/" target="_blank">العب الآن ▷</a></div></div>
+    </article>
+    <article class="game mine">
+      <div class="game-img"><span>MINECRAFT</span></div>
+      <div class="game-body"><div class="tag">بقاء</div><h2>Minecraft</h2><p>عالم مفتوح للبناء والاستكشاف والإبداع بلا حدود.</p><div class="buttons"><button>ⓘ معلومات</button><a href="https://www.minecraft.net/" target="_blank">العب الآن ▷</a></div></div>
+    </article>
+  </div>
+</section>
+
+<section class="columns">
+  <section id="kick" class="panel kick">
+    <h2>🟢 كيك الخاص بي</h2>
+    <div class="kick-content">
+      <div class="kick-logo">KICK</div>
+      <div>
+        <h3>LOKO على KICK</h3>
+        <p>تابعني في البثوث المباشرة والمحتوى الخاص بي على منصة Kick.</p>
+        <a class="kick-btn" href="https://kick.com/lkmxloko" target="_blank">زيارة قناة كيك ↗</a>
+        <div class="kick-url">kick.com/lkmxloko</div>
+      </div>
     </div>
-    <button class="profile-btn" onclick="window.open('https://ff.garena.com/','_blank')">👤 عرض الملف الشخصي</button>
-  </div>
-  <div class="game-image">
-    <img src="assets/freefire.jpg" alt="Free Fire">
-  </div>
+  </section>
+
+  <section id="about" class="panel about">
+    <h2>☆ عن LOKO</h2>
+    <div class="loko-big">LOKO</div>
+    <p>LOKO هو موقع شخصي لمطور بوتات بسيطة وصانع انتروات ومحتوى رقمي. أعمل على أفكار ومشاريع تجمع بين الألعاب والتصميم والتقنية.</p>
+    <div class="stats"><div><b>🤖</b><span>تطوير بوتات</span></div><div><b>🎬</b><span>صناعة انتروات</span></div><div><b>🎮</b><span>محتوى ألعاب</span></div></div>
+  </section>
 </section>
 
-<section id="kick" class="wide-card kick-card">
-  <div>
-    <h2><i></i> كيك الخاص بي</h2>
-    <div class="kick-logo">KICK</div>
-    <p>تابعني مباشرة على منصة كيك<br>بثوث مباشرة ومحتوى حصري!</p>
-    <a class="outline-btn green" href="https://kick.com/lkmxloko" target="_blank">زيارة القناة ↗</a>
+<section id="contact" class="contact panel">
+  <h2>✈ تواصل معي</h2>
+  <p>أرسل رسالتك وسأرد عليك في أقرب وقت ممكن.</p>
+  <!-- ضع رابط Formspree الخاص بك في action. لن يظهر بريدك الإلكتروني للزائر. -->
+  <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+    <input name="name" type="text" placeholder="الاسم" required>
+    <input name="email" type="email" placeholder="البريد الإلكتروني" required>
+    <input name="subject" type="text" placeholder="الموضوع" required>
+    <textarea name="message" placeholder="رسالتك هنا..." required></textarea>
+    <button type="submit">إرسال الرسالة ✈</button>
+  </form>
+  <div class="direct-links">
+    <a href="https://discord.gg/DnHWxYscs" target="_blank">Discord</a>
+    <a href="https://www.instagram.com/lo.kman_x?igsh=MWt6dWN4bGp1NHhxMg==" target="_blank">Instagram</a>
+    <a href="https://www.tiktok.com/@slivax_king" target="_blank">TikTok</a>
   </div>
-  <div class="kick-art">
-    <div class="big-k">K</div>
-    <span>kick.com/lkmxloko 🔗</span>
-  </div>
-</section>
-
-<section id="contact" class="contact">
-  <h2>✦ &nbsp; تواصل معي &nbsp; ✦</h2>
-  <div class="social-grid">
-    <a class="social instagram" href="https://www.instagram.com/lo.kman_x?igsh=MWt6dWN4bGp1NHhxMg==" target="_blank">
-      <div class="social-icon">◎</div><b>INSTAGRAM</b><small>تابعني على انستقرام</small><span>@lo.kman_x ↗</span>
-    </a>
-    <a class="social tiktok" href="https://www.tiktok.com/@slivax_king" target="_blank">
-      <div class="social-icon">♪</div><b>TIKTOK</b><small>تابعني على تيك توك</small><span>@slivax_king ↗</span>
-    </a>
-    <a class="social discord" href="https://discord.gg/DnHWxYscs" target="_blank">
-      <div class="social-icon">☯</div><b>DISCORD</b><small>انضم إلى سيرفر ديسكورد</small><span>انضم الآن ↗</span>
-    </a>
-  </div>
-</section>
-
-<section id="loko" class="loko-banner">
-  <div class="loko-mark">LOKO</div>
-  <div>★ L O K O ★</div>
 </section>
 </main>
 
-<footer>♛ © 2026 LOKO — جميع الحقوق محفوظة.</footer>
-<div id="toast"></div>
+<footer>💜 © 2026 LOKO — جميع الحقوق محفوظة.</footer>
 <script src="script.js"></script>
 </body>
 </html>
