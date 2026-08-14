@@ -2,79 +2,52 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>LOKO</title>
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@500;700;800;900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+<title>LOKO | Gamer & Creator</title><link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header>
-  <a class="logo" href="#top">♛ LOKO</a>
-  <button id="menu">☰</button>
-  <nav id="nav">
-    <a href="#games">🎮 ألعابي</a>
-    <a href="#kick">🟢 كيك الخاص بي</a>
-    <a href="#contact">♧ تواصل معي</a>
-    <a href="#loko">◇ LOKO</a>
-  </nav>
+<div id="intro" class="intro">
+  <video id="introVideo" autoplay muted playsinline preload="auto"><source src="assets/intro.mp4" type="video/mp4"></video>
+  <div id="introImage" class="introImage"><img src="assets/loko-entrance.png" alt="LOKO"></div>
+  <button id="skipIntro" class="skip">تخطي المقدمة ↗</button>
+</div>
+
+<div id="site" class="site">
+<header class="nav glass">
+  <a class="brand" href="#home"><span class="brandMark">L</span>LOKO</a>
+  <nav><a class="active" href="#home">الرئيسية</a><a href="#games">ألعابي</a><a href="#kick">Kick</a><a href="#contact">تواصل معي</a><a href="#about">LOKO</a></nav>
+  <a class="join" href="#contact">انضم إلي ↗</a>
 </header>
 
-<main id="top">
+<main id="home">
 <section class="hero">
-  <div class="hero-logo">♛<br><b>LOKO</b></div>
-  <p>موقعي الخاص</p>
-  <h1>WELCOME TO <span>LOKO</span></h1>
-  <a href="#games" class="main-btn">دخول الموقع ↓</a>
+  <div class="heroGlow"></div><div class="heroContent"><div class="miniLogo">LK</div>
+  <h1>LOKO</h1><p class="tag">GAMER <b>•</b> STREAMER <b>•</b> CREATOR</p>
+  <p class="desc">مرحبًا بك في عالمي. الألعاب، البث، والمحتوى الخاص بي في مكان واحد.</p>
+  <div class="actions"><a class="btn primary" href="#games">استكشف ألعابي ↙</a><a class="btn" href="#contact">تواصل معي</a></div></div>
+  <div class="heroCards"><div class="stat glass"><strong>FREE FIRE</strong><span>اللعبة الأساسية</span></div><div class="stat glass"><strong>5177803934</strong><span>UID</span></div><div class="stat glass"><strong>LOKO</strong><span>Gaming Identity</span></div></div>
 </section>
 
-<section id="games" class="wrap">
-  <div class="section-name"><i>01</i><h2>🎮 ألعابي</h2></div>
-  <article class="game-box">
-    <div class="game-copy">
-      <div class="label">اللعبة التي اخترتها</div>
-      <h2>FREE FIRE</h2>
-      <p>حساب LOKO في فري فاير</p>
-      <div class="uid"><span>UID</span><strong>5177803934</strong><button id="copy">نسخ</button></div>
-      <a href="#games" class="outline-btn">◉ عرض الملف الشخصي</a>
-    </div>
-    <img src="assets/freefire.jpg" alt="حساب LOKO في Free Fire">
-  </article>
-</section>
+<section id="games" class="section"><div class="sectionHead"><span>01</span><div><p>Gaming</p><h2>ألعابي</h2></div></div>
+<article class="gameCard glass"><div class="gameImage"><img src="assets/loko-entrance.png" alt="LOKO"><div class="gameOverlay"></div></div>
+<div class="gameInfo"><span class="pill">GAME PROFILE</span><h3>FREE FIRE</h3><p>حساب Free Fire الخاص بـ LOKO</p>
+<div class="uidBox"><span>UID</span><b id="uid">5177803934</b><button id="copyUid">نسخ</button></div>
+<a class="btn primary" href="https://ff.garena.com/" target="_blank" rel="noopener">عرض اللعبة ↗</a></div></article></section>
 
-<section id="kick" class="wrap">
-  <div class="section-name"><i>02</i><h2>🟢 كيك الخاص بي</h2></div>
-  <a class="kick-box" href="https://kick.com/lkmxloko" target="_blank" rel="noopener">
-    <div class="kick-logo">K</div>
-    <div><small>البث الخاص بي</small><h2>KICK</h2><p>تابعني على منصة كيك وشاهد البث والمحتوى.</p></div>
-    <div class="visit">زيارة القناة ↗</div>
-  </a>
-</section>
+<section id="kick" class="section"><div class="sectionHead"><span>02</span><div><p>Live</p><h2>Kick الخاص بي</h2></div></div>
+<div class="kickCard glass"><div class="kickLogo">KICK</div><div><span class="liveDot">● LIVE</span><h3>تابعني على Kick</h3><p>البثوث المباشرة والمحتوى الحصري لـ LOKO.</p></div>
+<a class="btn kickBtn" href="https://kick.com/lkmxloko" target="_blank" rel="noopener">زيارة القناة ↗</a></div></section>
 
-<section id="contact" class="wrap">
-  <div class="section-name center"><i>03</i><h2>تواصل معي</h2></div>
-  <div class="contacts">
-    <a href="https://www.instagram.com/lo.kman_x?igsh=MWt6dWN4bGp1NHhxMg==" target="_blank" rel="noopener" class="contact instagram">
-      <div class="social-icon">◎</div><small>INSTAGRAM</small><strong>@lo.kman_x</strong><span>زيارة الحساب ↗</span>
-    </a>
-    <a href="https://www.tiktok.com/@slivax_king" target="_blank" rel="noopener" class="contact tiktok">
-      <div class="social-icon">♪</div><small>TIKTOK</small><strong>@slivax_king</strong><span>زيارة الحساب ↗</span>
-    </a>
-    <a href="https://discord.gg/DCj3EdQRT" target="_blank" rel="noopener" class="contact discord">
-      <div class="social-icon">◉</div><small>DISCORD</small><strong>سيرفر LOKO</strong><span>انضم الآن ↗</span>
-    </a>
-  </div>
-</section>
+<section id="contact" class="section"><div class="sectionHead"><span>03</span><div><p>Social</p><h2>تواصل معي</h2></div></div>
+<div class="socialGrid">
+<a class="social glass insta" href="https://www.instagram.com/lo.kman_x?igsh=MWt6dWN4bGp1NHhxMg==" target="_blank" rel="noopener"><span class="icon">◎</span><div><b>Instagram</b><small>@lo.kman_x</small></div><span>↗</span></a>
+<a class="social glass tiktok" href="https://www.tiktok.com/@slivax_king" target="_blank" rel="noopener"><span class="icon">♪</span><div><b>TikTok</b><small>@slivax_king</small></div><span>↗</span></a>
+<a class="social glass discord" href="https://discord.gg/DCj3EdQRT" target="_blank" rel="noopener"><span class="icon">◉</span><div><b>Discord</b><small>سيرفر LOKO</small></div><span>↗</span></a>
+</div></section>
 
-<section id="loko" class="wrap">
-  <div class="loko-box">
-    <div class="crown">♛</div>
-    <div class="big-loko">LOKO</div>
-    <div class="stars">✦ ━━━━━ L O K O ━━━━━ ✦</div>
-  </div>
-</section>
+<section id="about" class="section"><div class="sectionHead"><span>04</span><div><p>Identity</p><h2>LOKO</h2></div></div>
+<div class="aboutBox glass"><div class="bigLoko">LOKO</div><p>هوية رقمية بطابع مستقبلي لمحبي الألعاب والبث وصناعة المحتوى.</p></div></section>
 </main>
-
-<footer><b>♛ LOKO</b><span>© <span id="year"></span> LOKO</span></footer>
-<div class="toast" id="toast">تم نسخ UID ✓</div>
-<script src="script.js"></script>
+<footer><div class="footerLogo">LOKO</div><p>© 2026 LOKO — جميع الحقوق محفوظة.</p></footer>
+</div>
+<div id="toast" class="toast">تم نسخ UID ✓</div><script src="script.js"></script>
 </body></html>
