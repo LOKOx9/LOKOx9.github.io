@@ -1,114 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap');
-
-:root{
-  --bg:#070605;
-  --panel:#0e0b08;
-  --gold:#d7a62a;
-  --gold2:#ffe08a;
-  --text:#f7f1e5;
-  --muted:#9d9589;
-  --line:rgba(215,166,42,.28);
-}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{
-  margin:0;background:var(--bg);color:var(--text);
-  font-family:Cairo,Arial,sans-serif;overflow-x:hidden;
-}
-body:before{
-  content:"";position:fixed;inset:0;z-index:-3;
-  background:
-   radial-gradient(circle at 50% 30%,rgba(215,166,42,.12),transparent 30%),
-   radial-gradient(circle at 10% 80%,rgba(215,166,42,.06),transparent 25%),
-   linear-gradient(120deg,#040303,#0c0906 50%,#030303);
-}
-body:after{
-  content:"";position:fixed;inset:0;z-index:-2;opacity:.12;
-  background-image:linear-gradient(rgba(255,255,255,.04) 1px,transparent 1px),
-                   linear-gradient(90deg,rgba(255,255,255,.04) 1px,transparent 1px);
-  background-size:70px 70px;animation:gridMove 18s linear infinite;
-}
-@keyframes gridMove{to{background-position:70px 70px}}
-
-a{text-decoration:none;color:inherit}
-.intro{position:fixed;inset:0;z-index:100;background:#020202;display:grid;place-items:center;overflow:hidden}
-.intro video{position:absolute;width:100%;height:100%;object-fit:cover}
-.introShade{position:absolute;inset:0;background:radial-gradient(circle,transparent 20%,rgba(0,0,0,.78) 85%),rgba(0,0,0,.32)}
-.introContent{position:relative;text-align:center}
-.crown{font-size:54px;color:var(--gold2);text-shadow:0 0 30px var(--gold)}
-.intro h1{font-size:clamp(65px,12vw,150px);margin:0;font-weight:900;letter-spacing:.08em;text-shadow:0 0 25px rgba(215,166,42,.7)}
-.intro p{color:#ddd;margin:0 0 20px}
-.intro button,.skip{font:inherit;cursor:pointer}
-#enterBtn{border:1px solid var(--gold);background:rgba(0,0,0,.5);color:white;padding:12px 34px;border-radius:4px}
-.skip{position:absolute;bottom:25px;left:25px;background:transparent;border:0;color:#bbb}
-.intro.hide{animation:fade .7s forwards}
-@keyframes fade{to{opacity:0;visibility:hidden}}
-
-.topbar{
-  position:sticky;top:14px;z-index:20;max-width:1250px;margin:14px auto 0;
-  padding:13px 22px;border:1px solid var(--line);background:rgba(5,4,3,.78);
-  backdrop-filter:blur(14px);display:flex;align-items:center;gap:25px;
-}
-.brand{font-size:24px;font-weight:900;letter-spacing:.08em;margin-left:auto;color:#fff}
-.brand span{color:var(--gold)}
-nav{display:flex;gap:30px;margin:auto}
-nav a{color:#c8c1b5;font-size:14px;transition:.25s}
-nav a:hover{color:var(--gold2)}
-.outlineBtn{border:1px solid var(--gold);padding:8px 20px;color:var(--gold2);font-size:13px}
-
-.hero{min-height:calc(100vh - 90px);max-width:1250px;margin:auto;position:relative;display:grid;grid-template-columns:1.05fr 1fr .8fr;align-items:center;gap:20px;padding:50px 25px}
-.hero:before{content:"";position:absolute;left:10%;right:10%;bottom:7%;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);box-shadow:0 0 35px var(--gold)}
-.heroCopy{z-index:2}
-.eyebrow,.tag{color:var(--gold);letter-spacing:.12em;font-size:12px}
-.hero h2{font-size:clamp(50px,7vw,100px);line-height:1;margin:12px 0;font-weight:900}
-.hero h2 span{display:block;color:var(--gold);text-shadow:0 0 25px rgba(215,166,42,.25)}
-.heroCopy p{color:#aaa;font-size:18px}
-.heroButtons{display:flex;gap:10px;margin-top:28px}
-.goldBtn,.darkBtn{display:inline-block;padding:12px 22px;border-radius:3px;font-weight:700;font-size:13px}
-.goldBtn{background:linear-gradient(135deg,#f0c44a,#a7740e);color:#130d03;box-shadow:0 8px 30px rgba(215,166,42,.15)}
-.darkBtn{border:1px solid #5d5549;background:#090807;color:#eee}
-
-.throne{height:560px;position:relative;display:grid;place-items:center}
-.throneBack{position:absolute;width:310px;height:430px;border:2px solid rgba(215,166,42,.65);clip-path:polygon(22% 0,78% 0,100% 28%,87% 100%,13% 100%,0 28%);background:linear-gradient(180deg,rgba(215,166,42,.12),rgba(0,0,0,.8));box-shadow:0 0 60px rgba(215,166,42,.12)}
-.throneBack:after{content:"";position:absolute;inset:20px;border:1px solid rgba(255,224,138,.25);clip-path:inherit}
-.crownBig{position:absolute;top:52px;z-index:3;color:var(--gold2);font-size:60px;text-shadow:0 0 30px var(--gold)}
-.avatar{z-index:2;width:180px;height:250px;display:grid;place-items:center;font-size:42px;font-weight:900;letter-spacing:.12em;color:#fff;background:radial-gradient(circle at 50% 20%,rgba(215,166,42,.35),transparent 35%),linear-gradient(#18120a,#050403);border:1px solid rgba(255,224,138,.35);box-shadow:0 0 45px rgba(215,166,42,.12)}
-.throneSeat{position:absolute;bottom:38px;width:280px;height:55px;border:1px solid var(--gold);background:#0b0805;box-shadow:0 0 40px rgba(215,166,42,.25)}
-
-.heroSide{z-index:3}
-.sideTitle{color:var(--gold2);font-weight:800;margin-bottom:12px}
-.sideCard{display:grid;grid-template-columns:1fr auto;gap:1px 10px;padding:15px;margin:9px 0;border:1px solid rgba(215,166,42,.25);background:rgba(14,11,8,.72);transition:.25s}
-.sideCard:hover{transform:translateX(-5px);border-color:var(--gold);background:rgba(215,166,42,.07)}
-.sideCard b{font-size:13px}.sideCard small{color:#8e887e;font-size:11px}.sideCard span{grid-row:1/3;grid-column:2;align-self:center;color:var(--gold2)}
-
-.section{max-width:1100px;margin:0 auto;padding:95px 25px}
-.sectionHead{display:grid;grid-template-columns:auto 1fr;align-items:end;gap:10px;margin-bottom:25px}
-.sectionHead span{color:var(--gold);font-size:12px}.sectionHead h3{font-size:40px;margin:0}.sectionHead p{grid-column:2;color:#8e887e;margin:0}
-
-.gameCard{display:grid;grid-template-columns:1.4fr 1fr;border:1px solid var(--line);background:linear-gradient(135deg,#0e0b08,#070605);overflow:hidden;min-height:330px}
-.gameImage img{width:100%;height:100%;object-fit:cover;display:block;filter:saturate(.9) contrast(1.05)}
-.gameInfo{padding:35px;display:flex;flex-direction:column;justify-content:center}
-.gameInfo h4{font-size:48px;margin:7px 0;color:#fff}
-.gameInfo p{color:#999}
-.uidBox{border:1px solid rgba(215,166,42,.3);padding:14px;margin:16px 0 20px;display:flex;align-items:center;gap:15px}
-.uidBox span{font-size:11px;color:var(--gold)}.uidBox strong{font-size:20px;letter-spacing:.05em}.uidBox button{margin-right:auto;background:#17120b;border:1px solid var(--gold);color:var(--gold2);padding:6px 10px;cursor:pointer}
-
-.linkGrid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
-.linkTile{position:relative;min-height:170px;border:1px solid #2a251f;background:#0b0907;padding:22px;display:flex;flex-direction:column;justify-content:flex-end;transition:.25s;overflow:hidden}
-.linkTile:before{content:"";position:absolute;inset:auto -20% -45%;height:100px;background:radial-gradient(circle,rgba(215,166,42,.18),transparent 65%);transition:.3s}
-.linkTile:hover{transform:translateY(-7px);border-color:var(--gold)}
-.linkTile b{position:absolute;top:18px;right:18px;font-size:42px;color:#ddd}.linkTile span{font-weight:800;font-size:15px}.linkTile small{color:#8d877d}.linkTile i{position:absolute;bottom:18px;left:18px;color:var(--gold);font-style:normal}
-.kick{border-color:rgba(215,166,42,.35)}.insta{border-color:rgba(220,80,150,.25)}.tiktok{border-color:rgba(70,210,220,.25)}.discord{border-color:rgba(100,120,230,.25)}
-
-.about{max-width:1100px;margin:20px auto 90px;padding:45px;border:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;background:linear-gradient(135deg,#100c07,#070605)}
-.about h3{font-size:70px;margin:0;color:var(--gold2)}.about p{max-width:650px;color:#a39b8e;line-height:2}
-.logoMark{text-align:center;color:var(--gold)}.logoMark div{font-size:70px}.logoMark strong{font-size:40px;letter-spacing:.15em}
-
-footer{text-align:center;padding:30px;color:#756e63;border-top:1px solid rgba(215,166,42,.15);font-size:12px}
-
-@media(max-width:900px){
-  nav{display:none}.hero{grid-template-columns:1fr;text-align:center}.heroButtons{justify-content:center}.throne{height:430px}.heroSide{max-width:500px;width:100%;margin:auto;text-align:right}.gameCard{grid-template-columns:1fr}.gameImage{height:260px}.linkGrid{grid-template-columns:1fr 1fr}.sectionHead{grid-template-columns:auto 1fr}.sectionHead p{grid-column:1/-1}
-}
-@media(max-width:560px){
-  .topbar{margin:8px;border-radius:4px}.outlineBtn{display:none}.hero{padding:30px 18px}.hero h2{font-size:56px}.throne{height:390px}.throneBack{width:250px;height:330px}.avatar{width:145px;height:210px}.linkGrid{grid-template-columns:1fr}.gameInfo{padding:24px}.gameInfo h4{font-size:38px}.about{margin:10px 18px 60px;padding:25px;flex-direction:column;gap:25px;text-align:center}
-}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#030303;color:#fff;font-family:Cairo,Arial,sans-serif;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;background:radial-gradient(circle at 50% 20%,rgba(255,255,255,.07),transparent 35%),radial-gradient(circle at 15% 80%,rgba(255,255,255,.035),transparent 30%);z-index:-2}
+.particles{position:fixed;inset:0;z-index:-1;opacity:.35;background-image:radial-gradient(#fff 1px,transparent 1px);background-size:95px 95px;animation:drift 18s linear infinite}
+@keyframes drift{to{background-position:95px 95px}}
+.topbar{height:100px;border-bottom:1px solid #222;display:flex;align-items:center;justify-content:space-between;padding:0 4%;position:sticky;top:0;background:rgba(0,0,0,.88);backdrop-filter:blur(14px);z-index:10}
+.brand{font-size:54px;font-weight:900;font-style:italic;letter-spacing:-6px;color:#fff;text-decoration:none;text-shadow:0 0 12px #fff}.brand span{font-size:20px;vertical-align:top;letter-spacing:0}
+nav{display:flex;gap:45px;height:100%;align-items:center}nav a{height:100%;display:flex;align-items:center;gap:8px;color:#ddd;text-decoration:none;font-size:17px;position:relative}nav a.active:after{content:"";position:absolute;bottom:0;left:5px;right:5px;height:3px;background:#fff;border-radius:5px;box-shadow:0 0 14px #fff}
+main{width:min(1200px,94%);margin:auto;padding:50px 0 20px}
+.hero-card,.wide-card,.loko-banner{border:1px solid #fff;border-radius:25px;overflow:hidden;box-shadow:0 0 25px rgba(255,255,255,.09);position:relative}
+.hero-card{min-height:400px;display:grid;grid-template-columns:42% 58%;background:#070707;margin-bottom:18px}.ribbon{position:absolute;left:0;top:0;background:#222;padding:10px 22px;clip-path:polygon(0 0,100% 0,65% 100%,0 100%);z-index:2}.game-info{padding:45px 48px;display:flex;flex-direction:column;align-items:flex-start;justify-content:center}.game-info h2{font-size:27px;margin:0 0 18px}.game-info h1{font-size:62px;line-height:1;margin:0 0 30px;font-weight:900;letter-spacing:-2px}
+.game-image{min-height:400px;background:#111}.game-image img{width:100%;height:100%;object-fit:cover;display:block}
+.uid-box{width:270px;border:1px solid #ddd;border-radius:16px;padding:12px 15px;display:grid;grid-template-columns:1fr auto;gap:2px 12px;margin-bottom:18px}.uid-box span{font-size:13px;color:#ddd}.uid-box strong{font-size:20px;direction:ltr;text-align:left}.uid-box button{grid-row:1/3;grid-column:2;background:#111;border:1px solid #aaa;color:#fff;border-radius:10px;padding:0 12px;cursor:pointer}
+.profile-btn,.outline-btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 25px;border-radius:13px;background:#050505;color:#fff;border:1px solid #fff;text-decoration:none;font-size:16px}.profile-btn{cursor:pointer}
+.wide-card{min-height:290px;margin-bottom:22px;padding:35px 45px;display:flex;justify-content:space-between;align-items:center}.kick-card{background:radial-gradient(circle at 70% 50%,#153b18,#050705 45%,#030303)}.kick-card h2{font-size:25px;margin:0}.kick-card h2 i{display:inline-block;width:14px;height:14px;border-radius:50%;background:#39ff5a;box-shadow:0 0 12px #39ff5a;margin-left:10px}.kick-logo{font-size:72px;font-weight:900;color:#7cff43;line-height:1;margin:12px 0}.kick-card p{color:#ddd;line-height:1.8}.green{border-color:#5cff5c}.kick-art{width:45%;height:220px;display:flex;align-items:center;justify-content:center;position:relative;border-radius:20px;background:radial-gradient(circle,#1b4d1c,transparent 60%)}.big-k{width:150px;height:150px;border:2px solid #68ff68;border-radius:50%;display:grid;place-items:center;color:#7cff43;font-size:90px;font-weight:900;box-shadow:0 0 30px #2fbd45}.kick-art span{position:absolute;bottom:8px;right:0;border:1px solid #aaa;border-radius:15px;padding:8px 18px}
+.contact h2{text-align:center;font-size:27px;margin:35px 0 20px}.social-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:25px}.social{min-height:205px;border:1px solid #888;border-radius:20px;padding:25px;text-align:center;color:#fff;text-decoration:none;background:#050505;transition:.25s;display:flex;flex-direction:column;align-items:center}.social:hover{transform:translateY(-6px);box-shadow:0 0 25px rgba(255,255,255,.2)}.social-icon{width:75px;height:75px;border:2px solid #fff;border-radius:50%;display:grid;place-items:center;font-size:43px;margin-bottom:10px}.social b{font-size:18px}.social small{color:#bbb;margin:3px 0 15px}.social span{border:1px solid #777;border-radius:10px;padding:7px 20px;width:100%;direction:ltr}.instagram .social-icon{box-shadow:0 0 20px #e1306c}.tiktok .social-icon{box-shadow:0 0 20px #25f4ee}.discord .social-icon{box-shadow:0 0 20px #5865f2}
+.loko-banner{margin-top:30px;height:300px;background:radial-gradient(circle,#262626,#050505 65%);display:flex;flex-direction:column;justify-content:center;align-items:center}.loko-mark{font-size:130px;font-weight:900;font-style:italic;letter-spacing:-12px;text-shadow:0 0 20px #fff,0 0 45px #aaa}.loko-banner div:last-child{letter-spacing:9px;margin-top:0}
+footer{text-align:center;color:#aaa;padding:20px 0 35px;font-size:13px}#toast{position:fixed;bottom:25px;left:50%;transform:translateX(-50%);background:#fff;color:#000;padding:10px 20px;border-radius:10px;opacity:0;transition:.3s;z-index:20}#toast.show{opacity:1}
+@media(max-width:800px){.topbar{height:auto;min-height:80px;flex-direction:column;padding:15px;gap:10px}.brand{font-size:40px}nav{gap:13px;height:45px}nav a{font-size:12px}.hero-card{grid-template-columns:1fr}.game-image{height:280px;order:-1}.game-info{padding:30px}.game-info h1{font-size:45px}.wide-card{padding:25px;flex-direction:column;align-items:stretch}.kick-art{width:100%;margin-top:20px}.social-grid{grid-template-columns:1fr}.loko-mark{font-size:80px}}
