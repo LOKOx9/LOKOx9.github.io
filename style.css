@@ -1,66 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap');
+
+:root{
+  --bg:#070605;
+  --panel:#0e0b08;
+  --gold:#d7a62a;
+  --gold2:#ffe08a;
+  --text:#f7f1e5;
+  --muted:#9d9589;
+  --line:rgba(215,166,42,.28);
+}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{margin:0;background:#020202;color:#fff;font-family:Cairo,Arial,sans-serif;overflow-x:hidden}
-body:before{content:"";position:fixed;inset:0;z-index:-3;pointer-events:none;background:
-radial-gradient(circle at 20% 20%,rgba(255,255,255,.035),transparent 25%),
-radial-gradient(circle at 80% 60%,rgba(255,255,255,.025),transparent 30%)}
-body:after{content:"";position:fixed;inset:0;z-index:-2;pointer-events:none;opacity:.11;background-image:
-radial-gradient(circle,#fff 1px,transparent 1px);background-size:170px 170px;animation:stars 25s linear infinite}
-@keyframes stars{to{background-position:170px 170px}}
+body{
+  margin:0;background:var(--bg);color:var(--text);
+  font-family:Cairo,Arial,sans-serif;overflow-x:hidden;
+}
+body:before{
+  content:"";position:fixed;inset:0;z-index:-3;
+  background:
+   radial-gradient(circle at 50% 30%,rgba(215,166,42,.12),transparent 30%),
+   radial-gradient(circle at 10% 80%,rgba(215,166,42,.06),transparent 25%),
+   linear-gradient(120deg,#040303,#0c0906 50%,#030303);
+}
+body:after{
+  content:"";position:fixed;inset:0;z-index:-2;opacity:.12;
+  background-image:linear-gradient(rgba(255,255,255,.04) 1px,transparent 1px),
+                   linear-gradient(90deg,rgba(255,255,255,.04) 1px,transparent 1px);
+  background-size:70px 70px;animation:gridMove 18s linear infinite;
+}
+@keyframes gridMove{to{background-position:70px 70px}}
 
-.intro{position:fixed;inset:0;z-index:100;background:#000;overflow:hidden}
-.intro video{width:100%;height:100%;object-fit:cover;display:block}
-.introShade{position:absolute;inset:0;background:linear-gradient(#0001,#0009);pointer-events:none}
-.introCenter{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;padding-bottom:95px;text-align:center}
-.introLogo{font:900 clamp(68px,13vw,155px)/1 Georgia,serif;font-style:italic;letter-spacing:10px;text-shadow:0 0 30px #fff}
-.loadingBar{width:min(420px,70vw);height:4px;background:#444;border-radius:5px;overflow:hidden;margin-top:18px}
-.loadingBar span{display:block;width:0;height:100%;background:#fff;box-shadow:0 0 16px #fff;transition:width .18s linear}
-.loadingText{margin-top:10px;font-size:13px;letter-spacing:6px;color:#ddd}
-.loadingText b{margin-right:8px;color:#fff}
-.skip{position:absolute;left:25px;bottom:25px;z-index:10;border:1px solid #888;background:#090909;color:#fff;padding:9px 18px;border-radius:30px;cursor:pointer}
-.site{opacity:0;visibility:hidden;transition:opacity .85s ease}
-.site.show{opacity:1;visibility:visible}
+a{text-decoration:none;color:inherit}
+.intro{position:fixed;inset:0;z-index:100;background:#020202;display:grid;place-items:center;overflow:hidden}
+.intro video{position:absolute;width:100%;height:100%;object-fit:cover}
+.introShade{position:absolute;inset:0;background:radial-gradient(circle,transparent 20%,rgba(0,0,0,.78) 85%),rgba(0,0,0,.32)}
+.introContent{position:relative;text-align:center}
+.crown{font-size:54px;color:var(--gold2);text-shadow:0 0 30px var(--gold)}
+.intro h1{font-size:clamp(65px,12vw,150px);margin:0;font-weight:900;letter-spacing:.08em;text-shadow:0 0 25px rgba(215,166,42,.7)}
+.intro p{color:#ddd;margin:0 0 20px}
+.intro button,.skip{font:inherit;cursor:pointer}
+#enterBtn{border:1px solid var(--gold);background:rgba(0,0,0,.5);color:white;padding:12px 34px;border-radius:4px}
+.skip{position:absolute;bottom:25px;left:25px;background:transparent;border:0;color:#bbb}
+.intro.hide{animation:fade .7s forwards}
+@keyframes fade{to{opacity:0;visibility:hidden}}
 
-.topbar{width:min(960px,94%);margin:14px auto 28px;height:86px;display:flex;align-items:center;justify-content:space-between;gap:20px}
-.brand{display:block;width:185px;height:78px}.brand img{width:100%;height:100%;object-fit:cover;object-position:left center;mix-blend-mode:screen}
-nav{display:flex;align-items:center;gap:32px}
-nav a{color:#ddd;text-decoration:none;font-size:15px;padding:18px 0;position:relative;white-space:nowrap}
-nav a.active:after,nav a:hover:after{content:"";position:absolute;bottom:4px;left:0;right:0;height:3px;border-radius:3px;background:#fff;box-shadow:0 0 12px #fff}
-.navIcon{font-size:21px;margin-left:5px}
+.topbar{
+  position:sticky;top:14px;z-index:20;max-width:1250px;margin:14px auto 0;
+  padding:13px 22px;border:1px solid var(--line);background:rgba(5,4,3,.78);
+  backdrop-filter:blur(14px);display:flex;align-items:center;gap:25px;
+}
+.brand{font-size:24px;font-weight:900;letter-spacing:.08em;margin-left:auto;color:#fff}
+.brand span{color:var(--gold)}
+nav{display:flex;gap:30px;margin:auto}
+nav a{color:#c8c1b5;font-size:14px;transition:.25s}
+nav a:hover{color:var(--gold2)}
+.outlineBtn{border:1px solid var(--gold);padding:8px 20px;color:var(--gold2);font-size:13px}
 
-main{width:min(960px,94%);margin:auto}
-.heroPanel,.kickPanel{border:1px solid #eee;border-radius:24px;overflow:hidden;background:linear-gradient(125deg,#060606,#111);box-shadow:0 0 24px rgba(255,255,255,.04);position:relative}
-.heroPanel{min-height:405px}.today{position:absolute;left:-38px;top:20px;transform:rotate(-45deg);background:#565656;width:135px;text-align:center;padding:5px;font-size:12px;z-index:4}
-.panelHeading{font-size:24px;font-weight:800;padding:26px 0 10px 110px;position:relative;z-index:4}
-.gameArea{display:grid;grid-template-columns:40% 60%;min-height:360px}
-.gameText{display:flex;flex-direction:column;justify-content:center;padding:25px 45px 40px 58px}
-.freefireTitle{font-family:Impact,Oswald,Arial,sans-serif;font-size:clamp(45px,5.8vw,68px);line-height:.92;letter-spacing:1px;text-shadow:2px 3px 0 #888}
-.freefireTitle span{margin-right:4px}
-.decorLine{width:170px;height:2px;background:#fff;margin:22px 0;position:relative}.decorLine:after{content:"◇";position:absolute;left:50%;top:-14px;font-size:15px}
-.uidCard{width:100%;max-width:275px;border:1px solid #eee;border-radius:14px;padding:12px 14px;position:relative;margin-bottom:18px}
-.uidTop{font-size:12px;color:#ddd}.uidValue{font-size:20px;font-weight:800;letter-spacing:1px;margin-top:2px;direction:ltr;text-align:left;padding-right:45px}
-.uidCard button{position:absolute;right:10px;top:21px;width:40px;height:40px;border:1px solid #999;border-radius:9px;background:#101010;color:#fff;cursor:pointer;font-size:20px}
-.outlineButton,.greenButton{display:inline-block;text-decoration:none;color:#fff;border:1px solid #fff;border-radius:12px;padding:11px 19px;font-weight:700;transition:.2s}.outlineButton:hover{background:#fff;color:#000}
-.gameImage{position:relative;overflow:hidden}.gameImage img{display:block;width:100%;height:100%;object-fit:cover;object-position:center}.imageFade{position:absolute;inset:0;background:linear-gradient(90deg,#060606 0,transparent 20%),linear-gradient(0deg,#0003,transparent 40%)}
+.hero{min-height:calc(100vh - 90px);max-width:1250px;margin:auto;position:relative;display:grid;grid-template-columns:1.05fr 1fr .8fr;align-items:center;gap:20px;padding:50px 25px}
+.hero:before{content:"";position:absolute;left:10%;right:10%;bottom:7%;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);box-shadow:0 0 35px var(--gold)}
+.heroCopy{z-index:2}
+.eyebrow,.tag{color:var(--gold);letter-spacing:.12em;font-size:12px}
+.hero h2{font-size:clamp(50px,7vw,100px);line-height:1;margin:12px 0;font-weight:900}
+.hero h2 span{display:block;color:var(--gold);text-shadow:0 0 25px rgba(215,166,42,.25)}
+.heroCopy p{color:#aaa;font-size:18px}
+.heroButtons{display:flex;gap:10px;margin-top:28px}
+.goldBtn,.darkBtn{display:inline-block;padding:12px 22px;border-radius:3px;font-weight:700;font-size:13px}
+.goldBtn{background:linear-gradient(135deg,#f0c44a,#a7740e);color:#130d03;box-shadow:0 8px 30px rgba(215,166,42,.15)}
+.darkBtn{border:1px solid #5d5549;background:#090807;color:#eee}
 
-.kickPanel{min-height:315px;margin-top:18px;background:radial-gradient(circle at 72% 58%,rgba(75,255,50,.10),transparent 31%),#040504}.kickHeading{padding-left:60px}.greenDot{color:#69ff37}.liveBadge{position:absolute;top:21px;right:22px;border:1px solid #285321;border-radius:18px;background:#091007;padding:6px 13px;color:#9cff81;font-size:12px;z-index:5}.liveBadge i{display:inline-block;width:8px;height:8px;border-radius:50%;background:#69ff37;box-shadow:0 0 10px #69ff37;margin-left:6px}
-.kickArea{display:grid;grid-template-columns:34% 38% 28%;align-items:center;min-height:235px;padding:7px 42px 30px}
-.kickTitle{font-family:Impact,Oswald,sans-serif;font-size:75px;line-height:.9;color:#69ff37;letter-spacing:1px}.kickText p{color:#ddd;line-height:1.8}.greenButton{border-color:#69ff37}.greenButton:hover{background:#69ff37;color:#000}
-.kickVisual{height:200px;position:relative;display:grid;place-items:center}.kickCircle{width:150px;height:150px;border:1px solid #69ff37;border-radius:50%;display:grid;place-items:center;box-shadow:0 0 25px rgba(105,255,55,.22)}.kickCircle span{font:800 78px Impact,Oswald,sans-serif;color:#69ff37}
-.kickFloor{position:absolute;bottom:7px;width:230px;height:34px;border-radius:50%;border:1px solid rgba(105,255,55,.55);box-shadow:0 0 22px rgba(105,255,55,.18),inset 0 0 20px rgba(105,255,55,.09)}
-.light{position:absolute;width:20px;height:70px;border:1px solid #173d14;bottom:36px;background:#101610}.lightA{left:10%}.lightB{right:10%}
-.kickUrl{justify-self:end;color:#ddd;text-decoration:none;border:1px solid #555;border-radius:20px;padding:8px 13px;direction:ltr;font-size:12px}
+.throne{height:560px;position:relative;display:grid;place-items:center}
+.throneBack{position:absolute;width:310px;height:430px;border:2px solid rgba(215,166,42,.65);clip-path:polygon(22% 0,78% 0,100% 28%,87% 100%,13% 100%,0 28%);background:linear-gradient(180deg,rgba(215,166,42,.12),rgba(0,0,0,.8));box-shadow:0 0 60px rgba(215,166,42,.12)}
+.throneBack:after{content:"";position:absolute;inset:20px;border:1px solid rgba(255,224,138,.25);clip-path:inherit}
+.crownBig{position:absolute;top:52px;z-index:3;color:var(--gold2);font-size:60px;text-shadow:0 0 30px var(--gold)}
+.avatar{z-index:2;width:180px;height:250px;display:grid;place-items:center;font-size:42px;font-weight:900;letter-spacing:.12em;color:#fff;background:radial-gradient(circle at 50% 20%,rgba(215,166,42,.35),transparent 35%),linear-gradient(#18120a,#050403);border:1px solid rgba(255,224,138,.35);box-shadow:0 0 45px rgba(215,166,42,.12)}
+.throneSeat{position:absolute;bottom:38px;width:280px;height:55px;border:1px solid var(--gold);background:#0b0805;box-shadow:0 0 40px rgba(215,166,42,.25)}
 
-.contactWrap{padding:18px 0}.contactTitle{text-align:center;font-size:22px;font-weight:800;margin:7px 0 18px}.contactTitle span{margin:0 18px;color:#ddd}
-.contactGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}.contactCard{position:relative;min-height:182px;border:1px solid #555;border-radius:19px;background:#050505;text-decoration:none;color:#fff;padding:20px;display:grid;grid-template-columns:58px 1fr 20px;grid-template-rows:68px 1fr;align-items:center;transition:.25s;overflow:hidden}
-.contactCard:hover{transform:translateY(-4px)}.socialLogo{width:54px;height:54px;border:1px solid currentColor;border-radius:50%;display:grid;place-items:center;font-size:31px}.socialName{font-weight:800;letter-spacing:1px}.socialSub{font-size:11px;color:#ccc}.contactCard .handle{grid-column:1/4;border:1px solid #666;border-radius:10px;padding:9px;text-align:center;font-size:13px}.instagram{color:#ff4eaa}.tiktok{color:#35e7ee}.discord{color:#7f8bff}.instagram:hover{box-shadow:0 0 22px rgba(255,78,170,.16)}.tiktok:hover{box-shadow:0 0 22px rgba(53,231,238,.16)}.discord:hover{box-shadow:0 0 22px rgba(127,139,255,.16)}
-.lokoWrap{margin-top:5px}.lokoCard{height:300px;border:1px solid #fff;border-radius:22px;overflow:hidden;background:#050505;position:relative}.lokoCard img{width:100%;height:100%;object-fit:cover;object-position:center 77%;filter:grayscale(1) contrast(1.08);display:block}.lokoCaption{position:absolute;bottom:14px;left:0;right:0;text-align:center;letter-spacing:6px;font-weight:800;text-shadow:0 2px 8px #000}
-footer{text-align:center;padding:14px 0 34px;color:#aaa;font-size:12px}.toast{position:fixed;z-index:200;bottom:22px;left:50%;transform:translate(-50%,20px);padding:10px 18px;background:#fff;color:#000;border-radius:10px;opacity:0;transition:.25s}.toast.show{opacity:1;transform:translate(-50%,0)}
+.heroSide{z-index:3}
+.sideTitle{color:var(--gold2);font-weight:800;margin-bottom:12px}
+.sideCard{display:grid;grid-template-columns:1fr auto;gap:1px 10px;padding:15px;margin:9px 0;border:1px solid rgba(215,166,42,.25);background:rgba(14,11,8,.72);transition:.25s}
+.sideCard:hover{transform:translateX(-5px);border-color:var(--gold);background:rgba(215,166,42,.07)}
+.sideCard b{font-size:13px}.sideCard small{color:#8e887e;font-size:11px}.sideCard span{grid-row:1/3;grid-column:2;align-self:center;color:var(--gold2)}
 
-@media(max-width:760px){
-  .topbar{height:auto;flex-direction:column;margin-bottom:10px}.brand{width:150px;height:68px}
-  nav{width:100%;overflow:auto;gap:15px;justify-content:center}nav a{font-size:12px}
-  .gameArea,.kickArea{grid-template-columns:1fr}.gameImage{min-height:250px;order:-1}.gameText{padding:25px}
-  .kickArea{padding:10px 24px 30px}.kickVisual{order:2}.kickUrl{justify-self:start}
-  .contactGrid{grid-template-columns:1fr}.panelHeading{padding:22px 24px 8px}.lokoCard{height:230px}
+.section{max-width:1100px;margin:0 auto;padding:95px 25px}
+.sectionHead{display:grid;grid-template-columns:auto 1fr;align-items:end;gap:10px;margin-bottom:25px}
+.sectionHead span{color:var(--gold);font-size:12px}.sectionHead h3{font-size:40px;margin:0}.sectionHead p{grid-column:2;color:#8e887e;margin:0}
+
+.gameCard{display:grid;grid-template-columns:1.4fr 1fr;border:1px solid var(--line);background:linear-gradient(135deg,#0e0b08,#070605);overflow:hidden;min-height:330px}
+.gameImage img{width:100%;height:100%;object-fit:cover;display:block;filter:saturate(.9) contrast(1.05)}
+.gameInfo{padding:35px;display:flex;flex-direction:column;justify-content:center}
+.gameInfo h4{font-size:48px;margin:7px 0;color:#fff}
+.gameInfo p{color:#999}
+.uidBox{border:1px solid rgba(215,166,42,.3);padding:14px;margin:16px 0 20px;display:flex;align-items:center;gap:15px}
+.uidBox span{font-size:11px;color:var(--gold)}.uidBox strong{font-size:20px;letter-spacing:.05em}.uidBox button{margin-right:auto;background:#17120b;border:1px solid var(--gold);color:var(--gold2);padding:6px 10px;cursor:pointer}
+
+.linkGrid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.linkTile{position:relative;min-height:170px;border:1px solid #2a251f;background:#0b0907;padding:22px;display:flex;flex-direction:column;justify-content:flex-end;transition:.25s;overflow:hidden}
+.linkTile:before{content:"";position:absolute;inset:auto -20% -45%;height:100px;background:radial-gradient(circle,rgba(215,166,42,.18),transparent 65%);transition:.3s}
+.linkTile:hover{transform:translateY(-7px);border-color:var(--gold)}
+.linkTile b{position:absolute;top:18px;right:18px;font-size:42px;color:#ddd}.linkTile span{font-weight:800;font-size:15px}.linkTile small{color:#8d877d}.linkTile i{position:absolute;bottom:18px;left:18px;color:var(--gold);font-style:normal}
+.kick{border-color:rgba(215,166,42,.35)}.insta{border-color:rgba(220,80,150,.25)}.tiktok{border-color:rgba(70,210,220,.25)}.discord{border-color:rgba(100,120,230,.25)}
+
+.about{max-width:1100px;margin:20px auto 90px;padding:45px;border:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;background:linear-gradient(135deg,#100c07,#070605)}
+.about h3{font-size:70px;margin:0;color:var(--gold2)}.about p{max-width:650px;color:#a39b8e;line-height:2}
+.logoMark{text-align:center;color:var(--gold)}.logoMark div{font-size:70px}.logoMark strong{font-size:40px;letter-spacing:.15em}
+
+footer{text-align:center;padding:30px;color:#756e63;border-top:1px solid rgba(215,166,42,.15);font-size:12px}
+
+@media(max-width:900px){
+  nav{display:none}.hero{grid-template-columns:1fr;text-align:center}.heroButtons{justify-content:center}.throne{height:430px}.heroSide{max-width:500px;width:100%;margin:auto;text-align:right}.gameCard{grid-template-columns:1fr}.gameImage{height:260px}.linkGrid{grid-template-columns:1fr 1fr}.sectionHead{grid-template-columns:auto 1fr}.sectionHead p{grid-column:1/-1}
+}
+@media(max-width:560px){
+  .topbar{margin:8px;border-radius:4px}.outlineBtn{display:none}.hero{padding:30px 18px}.hero h2{font-size:56px}.throne{height:390px}.throneBack{width:250px;height:330px}.avatar{width:145px;height:210px}.linkGrid{grid-template-columns:1fr}.gameInfo{padding:24px}.gameInfo h4{font-size:38px}.about{margin:10px 18px 60px;padding:25px;flex-direction:column;gap:25px;text-align:center}
 }
