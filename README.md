@@ -1,22 +1,13 @@
-# LOKO Gaming Website
+# LOKO
 
-موقع LOKO بتصميم أسود وأبيض مطابق لفكرة التصميم المرجعي، مع لمسات نيون خفيفة.
+نسخة موقع LOKO بتصميم مطابق لفكرة الصورة التي أرسلها صاحب الموقع، مع فيديو دخول.
 
-## الملفات
-- `index.html`
-- `style.css`
-- `script.js`
-- `assets/intro.mp4`
-- `assets/freefire.jpg`
-- `assets/loko-logo.jpg`
-- `assets/loko-footer.jpg`
-
-## التشغيل
-افتح `index.html` في المتصفح، أو ارفع الملفات إلى GitHub Pages.
-
-## الروابط
+## المحتوى
+- Free Fire — UID: 5177803934
 - Kick: https://kick.com/lkmxloko
 - Instagram: https://www.instagram.com/lo.kman_x
 - TikTok: https://www.tiktok.com/@slivax_king
 - Discord: https://discord.gg/DCj3EdQRT
-- Free Fire UID: 5177803934
+
+## التشغيل
+افتح index.html أو ارفع الملفات إلى GitHub Pages.

@@ -3,106 +3,131 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>LOKO | Gaming</title>
-<meta name="description" content="LOKO Gaming — Free Fire, Kick and social links">
+<title>LOKO</title>
+<meta name="description" content="LOKO - Free Fire, Kick, Instagram, TikTok and Discord">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- VIDEO ENTRY -->
-<section class="entry" id="entry">
+<!-- Intro video -->
+<section class="intro" id="intro">
   <video id="introVideo" autoplay muted playsinline preload="auto">
     <source src="assets/intro.mp4" type="video/mp4">
   </video>
-  <div class="entryShade"></div>
-  <div class="entryCenter">
-    <div class="entryTitle">LOKO</div>
-    <div class="entryLine"></div>
-    <p>اضغط للمتابعة</p>
+  <div class="introShade"></div>
+  <div class="introCenter">
+    <div class="introLogo">LOKO</div>
+    <div class="loadingBar"><span id="loadingProgress"></span></div>
+    <div class="loadingText">LOADING <b id="loadingPercent">0%</b></div>
   </div>
-  <button class="skip" id="skip">تخطي ↗</button>
+  <button class="skip" id="skip">تخطي المقدمة</button>
 </section>
 
-<div class="page" id="page">
-  <div class="particles"></div>
-
+<div id="site" class="site">
   <header class="topbar">
-    <a class="logoLink" href="#home"><img src="assets/loko-logo.jpg" alt="LOKO"></a>
+    <a href="#home" class="brand"><img src="assets/logo.jpg" alt="LOKO"></a>
     <nav>
-      <a class="active" href="#games">🎮 <span>ألعابي</span></a>
-      <a href="#kick">▣ <span>كيك الخاص بي</span></a>
-      <a href="#contact">♧ <span>تواصل معي</span></a>
-      <a href="#loko">◇ <span>LOKO</span></a>
+      <a class="active" href="#games"><span class="navIcon">🎮</span> ألعابي</a>
+      <a href="#kick"><span class="navIcon">K</span> كيك الخاص بي</a>
+      <a href="#contact"><span class="navIcon">♧</span> تواصل معي</a>
+      <a href="#loko"><span class="navIcon">◇</span> LOKO</a>
     </nav>
   </header>
 
   <main id="home">
 
-    <!-- GAMES -->
-    <section id="games" class="panel games-panel">
-      <div class="ribbon">الأولى</div>
-      <div class="panel-title"><span>🎮</span> ألعابي</div>
-      <div class="game-layout">
-        <div class="game-copy">
-          <div class="freefire">FREE<span>FIRE</span></div>
-          <div class="diamond"></div>
-          <div class="uid-box">
-            <div class="uid-label">🎮 &nbsp; UID</div>
-            <div class="uid-number" dir="ltr">5177803934</div>
-            <button id="copyUid" title="نسخ UID">⧉</button>
+    <!-- Games -->
+    <section class="heroPanel" id="games">
+      <div class="today">الأولى</div>
+      <div class="panelHeading">🎮 <span>ألعابي</span></div>
+
+      <div class="gameArea">
+        <div class="gameText">
+          <div class="freefireTitle">FREE<span>FIRE</span></div>
+          <div class="decorLine"><i></i></div>
+
+          <div class="uidCard">
+            <div class="uidTop">🎮 <span>UID</span></div>
+            <div class="uidValue">5177803934</div>
+            <button id="copyUid" aria-label="نسخ UID">⧉</button>
           </div>
-          <a class="outline-btn" href="https://ff.garena.com/" target="_blank" rel="noopener">👤 &nbsp; عرض الملف الشخصي</a>
+
+          <a class="outlineButton" href="https://ff.garena.com/" target="_blank" rel="noopener">
+            👤 &nbsp; عرض الملف الشخصي
+          </a>
         </div>
-        <div class="game-photo">
+
+        <div class="gameImage">
           <img src="assets/freefire.jpg" alt="Free Fire profile">
+          <div class="imageFade"></div>
         </div>
       </div>
     </section>
 
-    <!-- KICK -->
-    <section id="kick" class="panel kick-panel">
-      <div class="live"><i></i> مباشر الآن</div>
-      <div class="panel-title"><span class="green">●</span> كيك الخاص بي</div>
-      <div class="kick-layout">
-        <div class="kick-copy">
-          <div class="kickWord">KICK</div>
+    <!-- Kick -->
+    <section class="kickPanel" id="kick">
+      <div class="liveBadge"><i></i> مباشر الآن</div>
+      <div class="panelHeading kickHeading"><span class="greenDot"></span> كيك الخاص بي</div>
+
+      <div class="kickArea">
+        <div class="kickText">
+          <div class="kickTitle">KICK</div>
           <p>تابعني مباشرة على منصة كيك<br>بثوث مباشرة ومحتوى حصري!</p>
-          <a class="green-btn" href="https://kick.com/lkmxloko" target="_blank" rel="noopener">زيارة القناة ↗</a>
+          <a class="greenButton" href="https://kick.com/lkmxloko" target="_blank" rel="noopener">زيارة القناة ↗</a>
         </div>
-        <div class="kick-stage">
-          <div class="kick-ring"><span>K</span></div>
-          <div class="stage-floor"></div>
+
+        <div class="kickVisual">
+          <div class="kickCircle"><span>K</span></div>
+          <div class="kickFloor"></div>
+          <div class="light lightA"></div>
+          <div class="light lightB"></div>
         </div>
-        <a class="kick-url" href="https://kick.com/lkmxloko" target="_blank" rel="noopener">kick.com/lkmxloko &nbsp; 🔗</a>
+
+        <a class="kickUrl" href="https://kick.com/lkmxloko" target="_blank" rel="noopener">
+          kick.com/lkmxloko 🔗
+        </a>
       </div>
     </section>
 
-    <!-- CONTACT -->
-    <section id="contact" class="contact-section">
-      <div class="contact-title"><span>◇</span> تواصل معي <span>◇</span></div>
-      <div class="social-grid">
-        <a class="social instagram" href="https://www.instagram.com/lo.kman_x?igsh=MWt6dWN4bGp1NHhxMg==" target="_blank" rel="noopener">
-          <div class="social-icon">◎</div><div><b>INSTAGRAM</b><small>تابعني على انستغرام</small></div><span class="arrow">↗</span>
-          <div class="handle" dir="ltr">@lo.kman_x</div>
+    <!-- Contact -->
+    <section class="contactWrap" id="contact">
+      <div class="contactTitle"><span>◇</span> تواصل معي <span>◇</span></div>
+
+      <div class="contactGrid">
+        <a class="contactCard instagram" href="https://www.instagram.com/lo.kman_x?igsh=MWt6dWN4bGp1NHhxMg==" target="_blank" rel="noopener">
+          <div class="socialLogo">◎</div>
+          <div class="socialName">INSTAGRAM</div>
+          <div class="socialSub">تابعني على انستقرام</div>
+          <div class="handle">@lo.kman_x <b>↗</b></div>
         </a>
-        <a class="social tiktok" href="https://www.tiktok.com/@slivax_king" target="_blank" rel="noopener">
-          <div class="social-icon">♪</div><div><b>TIKTOK</b><small>تابعني على تيك توك</small></div><span class="arrow">↗</span>
-          <div class="handle" dir="ltr">@slivax_king</div>
+
+        <a class="contactCard tiktok" href="https://www.tiktok.com/@slivax_king" target="_blank" rel="noopener">
+          <div class="socialLogo">♪</div>
+          <div class="socialName">TIKTOK</div>
+          <div class="socialSub">تابعني على تيك توك</div>
+          <div class="handle">@slivax_king <b>↗</b></div>
         </a>
-        <a class="social discord" href="https://discord.gg/DCj3EdQRT" target="_blank" rel="noopener">
-          <div class="social-icon">☯</div><div><b>DISCORD</b><small>انضم إلى سيرفر ديسكورد</small></div><span class="arrow">↗</span>
-          <div class="handle">انضم الآن</div>
+
+        <a class="contactCard discord" href="https://discord.gg/DCj3EdQRT" target="_blank" rel="noopener">
+          <div class="socialLogo">◉</div>
+          <div class="socialName">DISCORD</div>
+          <div class="socialSub">انضم إلى سيرفر ديسكورد</div>
+          <div class="handle">انضم الآن <b>↗</b></div>
         </a>
       </div>
     </section>
 
     <!-- LOKO -->
-    <section id="loko" class="loko-panel">
-      <img src="assets/loko-footer.jpg" alt="LOKO">
+    <section class="lokoWrap" id="loko">
+      <div class="lokoCard">
+        <img src="assets/footer-logo.jpg" alt="LOKO">
+        <div class="lokoCaption">★ L O K O ★</div>
+      </div>
     </section>
+
   </main>
 
-  <footer>♛ © 2026 LOKO. جميع الحقوق محفوظة.</footer>
+  <footer>♛ &nbsp; © 2026 LOKO. جميع الحقوق محفوظة.</footer>
 </div>
 
 <div class="toast" id="toast">تم نسخ UID ✓</div>
