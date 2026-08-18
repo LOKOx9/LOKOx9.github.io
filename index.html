@@ -1,74 +1,67 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ar" dir="rtl">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>LOKO</title>
-<link rel="stylesheet" href="style.css">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>LOKO — Gaming Universe</title><link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div id="loader"><div class="loader-logo">LOKO</div></div>
+<div class="cursor-glow"></div>
+<div id="loader"><div class="loader-mark">L<span>O</span>KO</div><div class="load-line"><i></i></div></div>
 
-<section class="hero" id="home">
-  <nav>
-    <a class="brand" href="#home">LOKO</a>
-    <button class="menu-btn" id="menuBtn">☰</button>
-  </nav>
-
-  <div class="hero-content">
-    <p class="eyebrow">GAMING • COMMUNITY • CREATION</p>
+<section class="landing" id="landing">
+  <div class="noise"></div><div class="grid"></div>
+  <nav class="topbar"><div class="logo">LOKO<span>.</span></div><div class="top-status"><i></i> ONLINE</div></nav>
+  <div class="hero-copy">
+    <div class="mini">WELCOME TO THE UNIVERSE</div>
     <h1>LOKO</h1>
-    <p class="subtitle">عالم LOKO يبدأ من هنا.</p>
-    <button class="enter-btn" id="enterBtn">دخول</button>
+    <div class="line"></div>
+    <p>Gaming · Community · Creation</p>
+    <button id="enter" class="enter">دخول <span>↗</span></button>
   </div>
-  <div class="orb orb1"></div><div class="orb orb2"></div>
+  <div class="scroll">SCROLL TO EXPLORE <b>↓</b></div>
+  <div class="shape s1"></div><div class="shape s2"></div>
 </section>
 
-<main id="siteContent" class="hidden">
+<main id="content" class="content hidden">
+<header class="site-nav">
+ <a href="#content" class="nav-logo">LOKO<span>.</span></a>
+ <div class="links"><a href="#games">الألعاب</a><a href="#services">الخدمات</a><a href="#kick">KICK</a><a href="#discord">DISCORD</a></div>
+ <a class="nav-pill" href="https://discord.gg/geBtewgb5" target="_blank">Discord ↗</a>
+</header>
+
+<section class="intro section">
+ <div><div class="kicker">01 / LOKO UNIVERSE</div><h2>أكثر من مجرد<br><em>موقع ألعاب.</em></h2></div>
+ <p class="intro-text">مكان يجمع الألعاب، المجتمع، صناعة البوتات والمشاريع الإبداعية في تجربة واحدة.</p>
+</section>
+
 <section id="games" class="section">
-  <div class="section-title"><span>01</span><h2>الألعاب</h2></div>
-  <div class="cards">
-    <article class="card"><div class="game-icon">CS2</div><h3>Counter-Strike 2</h3><p>أجواء تنافسية ومواجهات سريعة.</p></article>
-    <article class="card"><div class="game-icon">V</div><h3>VALORANT</h3><p>تكتيك وقدرات وفريق واحد.</p></article>
-    <article class="card"><div class="game-icon">MC</div><h3>Minecraft</h3><p>إبداع وبناء ومغامرات.</p></article>
-    <article class="card"><div class="game-icon">FF</div><h3>Free Fire</h3><p>معارك سريعة وحماس مستمر.</p></article>
-  </div>
+ <div class="section-head"><div><div class="kicker">02 / GAMES</div><h2>العـابـي</h2></div><span>04 TITLES</span></div>
+ <div class="game-grid">
+  <article class="game cs"><div class="game-art"><div class="cross">+</div><b>CS2</b></div><div class="game-info"><small>01 / COMPETITIVE</small><h3>Counter-Strike 2</h3><p>Precision · Strategy · Teamwork</p></div></article>
+  <article class="game valo"><div class="game-art"><div class="vmark">V</div></div><div class="game-info"><small>02 / TACTICAL</small><h3>VALORANT</h3><p>Agents · Tactics · Clutch</p></div></article>
+  <article class="game mc"><div class="game-art"><div class="cube">◆</div><b>MC</b></div><div class="game-info"><small>03 / SANDBOX</small><h3>Minecraft</h3><p>Create · Explore · Survive</p></div></article>
+  <article class="game ff"><div class="game-art"><div class="ffmark">FF</div></div><div class="game-info"><small>04 / BATTLE ROYALE</small><h3>Free Fire</h3><p>Fast · Fierce · Fun</p></div></article>
+ </div>
 </section>
 
-<section id="services" class="section dark-section">
-  <div class="section-title"><span>02</span><h2>خدمات LOKO</h2></div>
-  <div class="service-grid">
-    <div class="service"><b>🤖</b><h3>Discord Bots</h3><p>بوتات وأوامر وإدارة سيرفرات.</p></div>
-    <div class="service"><b>🎬</b><h3>Intro Maker</h3><p>انتروهات ومقدمات بطابع LOKO.</p></div>
-    <div class="service"><b>⚡</b><h3>Web Projects</h3><p>واجهات ومشاريع ويب عصرية.</p></div>
-  </div>
+<section id="services" class="section services">
+ <div class="section-head"><div><div class="kicker">03 / WHAT I DO</div><h2>خدمات LOKO</h2></div></div>
+ <div class="service-grid">
+  <div class="service"><span>01</span><div class="service-icon">⌘</div><h3>Discord Bots</h3><p>بوتات قوية، أوامر مخصصة وأنظمة إدارة.</p><b>EXPLORE ↗</b></div>
+  <div class="service"><span>02</span><div class="service-icon">✦</div><h3>Intro Maker</h3><p>مقدمات مرئية بطابع سينمائي وهوية خاصة.</p><b>EXPLORE ↗</b></div>
+  <div class="service"><span>03</span><div class="service-icon">◈</div><h3>Web Projects</h3><p>واجهات عصرية وسريعة ومتجاوبة.</p><b>EXPLORE ↗</b></div>
+ </div>
 </section>
 
-<section id="kick" class="section kick-section">
-  <div class="kick-box">
-    <div><p class="eyebrow">LIVE COMMUNITY</p><h2>Kick</h2><p>تابع lkmxloko على Kick.</p></div>
-    <a class="kick-btn" href="https://kick.com/lkmxloko" target="_blank" rel="noopener">فتح قناة Kick</a>
-  </div>
+<section id="kick" class="section kick">
+ <div class="kick-card"><div class="kick-logo">KICK<span>•</span></div><div><div class="kicker">LIVE NOW / COMMUNITY</div><h2>تابع LOKO على Kick</h2><p>lkmxloko — المحتوى والبث في مكان واحد.</p></div><a href="https://kick.com/lkmxloko" target="_blank" class="kick-btn">VISIT CHANNEL ↗</a></div>
 </section>
 
-<section id="community" class="section">
-  <div class="community-box">
-    <div><p class="eyebrow">JOIN THE COMMUNITY</p><h2>Discord</h2><p>انضم إلى مجتمع LOKO.</p></div>
-    <a class="btn primary" href="https://discord.gg/geBtewgb5" target="_blank" rel="noopener">انضم إلى Discord</a>
-  </div>
+<section id="discord" class="section discord">
+ <div class="discord-card"><div class="discord-symbol">◉</div><div><div class="kicker">JOIN THE COMMUNITY</div><h2>جاهز تدخل عالم LOKO؟</h2><p>انضم إلى سيرفر Discord وخليك قريب من كل جديد.</p></div><a href="https://discord.gg/geBtewgb5" target="_blank" class="discord-btn">انضم الآن ↗</a></div>
 </section>
 
-<section id="contact" class="section">
-  <div class="section-title"><span>03</span><h2>تواصل معنا</h2></div>
-  <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="contact-form">
-    <input name="name" placeholder="اسمك" required>
-    <input name="email" type="email" placeholder="بريدك الإلكتروني" required>
-    <textarea name="message" placeholder="اكتب رسالتك..." required></textarea>
-    <button class="btn primary" type="submit">إرسال</button>
-  </form>
-</section>
+<footer><div class="logo">LOKO<span>.</span></div><p>GAMING · COMMUNITY · CREATION</p><a href="#landing">↑ TOP</a></footer>
 </main>
-
 <script src="script.js"></script>
-</body>
-</html>
+</body></html>

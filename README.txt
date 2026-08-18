@@ -1,20 +1,7 @@
-LOKO WEBSITE
-============
-
-الملفات:
-- index.html
-- style.css
-- script.js
-- audio/calm.mp3 (أضف ملف صوت هادئ بهذا الاسم)
-
-قبل النشر:
-1. افتح index.html للتجربة.
-2. في index.html غيّر:
-   https://formspree.io/f/YOUR_FORM_ID
-   إلى رابط نموذج Formspree الخاص بك.
-3. ضع ملف صوت هادئ باسم calm.mp3 داخل مجلد audio.
-4. رابط Discord المعتمد:
-   https://discord.gg/geBtewgb5
-
-ملاحظة:
-زر الصوت لا يشغّل تلقائياً؛ يجب على الزائر الضغط عليه بسبب قيود المتصفحات.
+LOKO PRO WEBSITE
+- Landing screen with animated LOKO logo.
+- No music.
+- Content appears only after pressing دخول.
+- Kick: https://kick.com/lkmxloko
+- Discord: https://discord.gg/geBtewgb5
+- Game visuals are built-in stylized artwork, so no extra image downloads are required.
