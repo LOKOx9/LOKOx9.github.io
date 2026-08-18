@@ -1,92 +1,74 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>LOKO | Gaming & Discord</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>LOKO</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div id="loader"><div class="loader-logo">LOKO</div></div>
+<div id="loader"><div class="loader-logo">LOKO</div></div>
 
-  <header class="hero" id="home">
-    <nav>
-      <a class="brand" href="#home">LOKO</a>
-      <div class="nav-links">
-        <a href="#games">الألعاب</a>
-        <a href="#services">الخدمات</a>
-        <a href="#community">المجتمع</a>
-        <a href="#contact">تواصل</a>
-      </div>
-      <button id="soundBtn" class="icon-btn" aria-label="الصوت">🔇</button>
-    </nav>
+<section class="hero" id="home">
+  <nav>
+    <a class="brand" href="#home">LOKO</a>
+    <button class="menu-btn" id="menuBtn">☰</button>
+  </nav>
 
-    <div class="hero-content">
-      <p class="eyebrow">GAMING • COMMUNITY • CREATION</p>
-      <h1>LOKO</h1>
-      <p>عالم واحد للألعاب، المجتمع، وصناعة البوتات والانتروهات.</p>
-      <div class="hero-buttons">
-        <a class="btn primary" href="#games">اكتشف الموقع</a>
-        <a class="btn secondary" href="https://discord.gg/geBtewgb5" target="_blank" rel="noopener">Discord</a>
-      </div>
-    </div>
-    <div class="glow"></div>
-  </header>
+  <div class="hero-content">
+    <p class="eyebrow">GAMING • COMMUNITY • CREATION</p>
+    <h1>LOKO</h1>
+    <p class="subtitle">عالم LOKO يبدأ من هنا.</p>
+    <button class="enter-btn" id="enterBtn">دخول</button>
+  </div>
+  <div class="orb orb1"></div><div class="orb orb2"></div>
+</section>
 
-  <main>
-    <section id="games" class="section">
-      <div class="section-title">
-        <span>01</span><h2>الألعاب</h2>
-      </div>
-      <div class="cards">
-        <article class="card"><div class="game-icon">CS2</div><h3>Counter-Strike 2</h3><p>أجواء تنافسية ومواجهات سريعة.</p></article>
-        <article class="card"><div class="game-icon">V</div><h3>VALORANT</h3><p>تكتيك، قدرات، وفريق واحد.</p></article>
-        <article class="card"><div class="game-icon">MC</div><h3>Minecraft</h3><p>إبداع وبناء ومغامرات بلا حدود.</p></article>
-        <article class="card"><div class="game-icon">FF</div><h3>Free Fire</h3><p>معارك سريعة وحماس مستمر.</p></article>
-      </div>
-    </section>
+<main id="siteContent" class="hidden">
+<section id="games" class="section">
+  <div class="section-title"><span>01</span><h2>الألعاب</h2></div>
+  <div class="cards">
+    <article class="card"><div class="game-icon">CS2</div><h3>Counter-Strike 2</h3><p>أجواء تنافسية ومواجهات سريعة.</p></article>
+    <article class="card"><div class="game-icon">V</div><h3>VALORANT</h3><p>تكتيك وقدرات وفريق واحد.</p></article>
+    <article class="card"><div class="game-icon">MC</div><h3>Minecraft</h3><p>إبداع وبناء ومغامرات.</p></article>
+    <article class="card"><div class="game-icon">FF</div><h3>Free Fire</h3><p>معارك سريعة وحماس مستمر.</p></article>
+  </div>
+</section>
 
-    <section id="services" class="section dark-section">
-      <div class="section-title"><span>02</span><h2>خدمات LOKO</h2></div>
-      <div class="service-grid">
-        <div class="service"><b>🤖</b><h3>Discord Bots</h3><p>بوتات وأوامر وإدارة سيرفرات.</p></div>
-        <div class="service"><b>🎬</b><h3>Intro Maker</h3><p>انتروهات ومقدمات بطابع LOKO.</p></div>
-        <div class="service"><b>⚡</b><h3>Web Projects</h3><p>واجهات ومشاريع ويب عصرية.</p></div>
-      </div>
-    </section>
+<section id="services" class="section dark-section">
+  <div class="section-title"><span>02</span><h2>خدمات LOKO</h2></div>
+  <div class="service-grid">
+    <div class="service"><b>🤖</b><h3>Discord Bots</h3><p>بوتات وأوامر وإدارة سيرفرات.</p></div>
+    <div class="service"><b>🎬</b><h3>Intro Maker</h3><p>انتروهات ومقدمات بطابع LOKO.</p></div>
+    <div class="service"><b>⚡</b><h3>Web Projects</h3><p>واجهات ومشاريع ويب عصرية.</p></div>
+  </div>
+</section>
 
-    <section id="community" class="section">
-      <div class="community-box">
-        <div>
-          <p class="eyebrow">JOIN THE COMMUNITY</p>
-          <h2>مجتمع LOKO</h2>
-          <p>انضم إلى سيرفر Discord وتابع جديد المشروع.</p>
-        </div>
-        <a class="btn primary" href="https://discord.gg/geBtewgb5" target="_blank" rel="noopener">انضم إلى Discord</a>
-      </div>
-    </section>
+<section id="kick" class="section kick-section">
+  <div class="kick-box">
+    <div><p class="eyebrow">LIVE COMMUNITY</p><h2>Kick</h2><p>تابع lkmxloko على Kick.</p></div>
+    <a class="kick-btn" href="https://kick.com/lkmxloko" target="_blank" rel="noopener">فتح قناة Kick</a>
+  </div>
+</section>
 
-    <section id="contact" class="section">
-      <div class="section-title"><span>03</span><h2>تواصل معنا</h2></div>
-      <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="contact-form">
-        <input type="text" name="name" placeholder="اسمك" required>
-        <input type="email" name="email" placeholder="بريدك الإلكتروني" required>
-        <textarea name="message" placeholder="اكتب رسالتك..." required></textarea>
-        <button class="btn primary" type="submit">إرسال الرسالة</button>
-      </form>
-      <p class="small">استبدل YOUR_FORM_ID بمعرّف نموذج Formspree الخاص بك قبل النشر.</p>
-    </section>
-  </main>
+<section id="community" class="section">
+  <div class="community-box">
+    <div><p class="eyebrow">JOIN THE COMMUNITY</p><h2>Discord</h2><p>انضم إلى مجتمع LOKO.</p></div>
+    <a class="btn primary" href="https://discord.gg/geBtewgb5" target="_blank" rel="noopener">انضم إلى Discord</a>
+  </div>
+</section>
 
-  <footer>
-    <strong>LOKO</strong>
-    <span>Gaming • Discord • Creation</span>
-  </footer>
+<section id="contact" class="section">
+  <div class="section-title"><span>03</span><h2>تواصل معنا</h2></div>
+  <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="contact-form">
+    <input name="name" placeholder="اسمك" required>
+    <input name="email" type="email" placeholder="بريدك الإلكتروني" required>
+    <textarea name="message" placeholder="اكتب رسالتك..." required></textarea>
+    <button class="btn primary" type="submit">إرسال</button>
+  </form>
+</section>
+</main>
 
-  <audio id="bgAudio" loop preload="auto">
-    <!-- ضع هنا ملف الصوت الهادئ باسم calm.mp3 داخل مجلد audio -->
-    <source src="audio/calm.mp3" type="audio/mpeg">
-  </audio>
-  <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
