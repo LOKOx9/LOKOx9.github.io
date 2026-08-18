@@ -1,67 +1,89 @@
 <!doctype html>
 <html lang="ar" dir="rtl">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>LOKO — Gaming Universe</title><link rel="stylesheet" href="style.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>LOKO | Gaming</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="cursor-glow"></div>
-<div id="loader"><div class="loader-mark">L<span>O</span>KO</div><div class="load-line"><i></i></div></div>
+<div id="loader"><div class="loader-logo">LOKO</div><div class="loader-bar"></div></div>
 
-<section class="landing" id="landing">
-  <div class="noise"></div><div class="grid"></div>
-  <nav class="topbar"><div class="logo">LOKO<span>.</span></div><div class="top-status"><i></i> ONLINE</div></nav>
-  <div class="hero-copy">
-    <div class="mini">WELCOME TO THE UNIVERSE</div>
+<section class="landing">
+  <div class="stars"></div><div class="rings"></div>
+  <nav><div class="logo">LOKO<span>.</span></div><div class="live"><i></i> ONLINE</div></nav>
+  <div class="landing-center">
+    <div class="welcome">WELCOME TO</div>
     <h1>LOKO</h1>
-    <div class="line"></div>
-    <p>Gaming · Community · Creation</p>
-    <button id="enter" class="enter">دخول <span>↗</span></button>
+    <p>Gaming • Community • Creation</p>
+    <button id="enter">دخول <b>↗</b></button>
   </div>
-  <div class="scroll">SCROLL TO EXPLORE <b>↓</b></div>
-  <div class="shape s1"></div><div class="shape s2"></div>
+  <div class="bottom-note">A NEW EXPERIENCE IS WAITING <span>↓</span></div>
 </section>
 
-<main id="content" class="content hidden">
-<header class="site-nav">
- <a href="#content" class="nav-logo">LOKO<span>.</span></a>
- <div class="links"><a href="#games">الألعاب</a><a href="#services">الخدمات</a><a href="#kick">KICK</a><a href="#discord">DISCORD</a></div>
- <a class="nav-pill" href="https://discord.gg/geBtewgb5" target="_blank">Discord ↗</a>
+<main id="site" class="hidden">
+<header class="nav">
+ <a class="logo" href="#">LOKO<span>.</span></a>
+ <div class="navlinks"><a href="#games">الألعاب</a><a href="#services">الخدمات</a><a href="#kick">KICK</a><a href="#discord">DISCORD</a></div>
+ <a class="mini-btn" href="https://discord.gg/geBtewgb5" target="_blank">Discord ↗</a>
 </header>
 
-<section class="intro section">
- <div><div class="kicker">01 / LOKO UNIVERSE</div><h2>أكثر من مجرد<br><em>موقع ألعاب.</em></h2></div>
- <p class="intro-text">مكان يجمع الألعاب، المجتمع، صناعة البوتات والمشاريع الإبداعية في تجربة واحدة.</p>
+<section class="welcome-section">
+ <div class="tag">LOKO / 2026</div>
+ <h2>عالمك.<br><span>قوانينك.</span></h2>
+ <p>اكتشف الألعاب التي تحبها، تابع البث، وانضم إلى مجتمع LOKO.</p>
 </section>
 
-<section id="games" class="section">
- <div class="section-head"><div><div class="kicker">02 / GAMES</div><h2>العـابـي</h2></div><span>04 TITLES</span></div>
+<section id="games" class="games section">
+ <div class="heading"><div><small>01 / GAMES</small><h2>الألعاب</h2></div><span>OFFICIAL DOWNLOADS</span></div>
  <div class="game-grid">
-  <article class="game cs"><div class="game-art"><div class="cross">+</div><b>CS2</b></div><div class="game-info"><small>01 / COMPETITIVE</small><h3>Counter-Strike 2</h3><p>Precision · Strategy · Teamwork</p></div></article>
-  <article class="game valo"><div class="game-art"><div class="vmark">V</div></div><div class="game-info"><small>02 / TACTICAL</small><h3>VALORANT</h3><p>Agents · Tactics · Clutch</p></div></article>
-  <article class="game mc"><div class="game-art"><div class="cube">◆</div><b>MC</b></div><div class="game-info"><small>03 / SANDBOX</small><h3>Minecraft</h3><p>Create · Explore · Survive</p></div></article>
-  <article class="game ff"><div class="game-art"><div class="ffmark">FF</div></div><div class="game-info"><small>04 / BATTLE ROYALE</small><h3>Free Fire</h3><p>Fast · Fierce · Fun</p></div></article>
+  <article class="game-card cs">
+   <div class="cover"><div class="cover-glow"></div><div class="cover-logo">CS<span>2</span></div><div class="cover-sub">COUNTER-STRIKE</div></div>
+   <div class="game-body"><small>PC · FREE TO PLAY</small><h3>Counter-Strike 2</h3><p>تجربة تنافسية من Valve على Steam.</p><a class="download" href="https://store.steampowered.com/app/730/CounterStrike_2/" target="_blank">تحميل / Steam ↗</a></div>
+  </article>
+  <article class="game-card valo">
+   <div class="cover"><div class="vshape">V</div><div class="cover-sub">VALORANT</div></div>
+   <div class="game-body"><small>PC · FREE TO PLAY</small><h3>VALORANT</h3><p>تصويب تكتيكي 5 ضد 5 بقدرات مميزة.</p><a class="download" href="https://playvalorant.com/ar-ae/download/" target="_blank">تحميل رسمي ↗</a></div>
+  </article>
+  <article class="game-card minecraft">
+   <div class="cover"><div class="mcblock">M</div><div class="cover-sub">MINECRAFT</div></div>
+   <div class="game-body"><small>PC · JAVA / BEDROCK</small><h3>Minecraft</h3><p>ابنِ، استكشف واصنع عالمك الخاص.</p><a class="download" href="https://www.minecraft.net/en-us/download" target="_blank">تحميل رسمي ↗</a></div>
+  </article>
+  <article class="game-card ff">
+   <div class="cover"><div class="fflogo">FREE<br><b>FIRE</b></div><div class="cover-sub">BATTLE ROYALE</div></div>
+   <div class="game-body"><small>ANDROID · IOS</small><h3>Free Fire</h3><p>باتل رويال سريع ومخصص للهواتف.</p><a class="download" href="https://ff.garena.com/en/" target="_blank">تحميل رسمي ↗</a></div>
+  </article>
  </div>
+ <p class="source-note">أزرار التحميل تنقلك إلى الصفحات الرسمية للألعاب، وليس إلى ملفات مقرصنة.</p>
 </section>
 
-<section id="services" class="section services">
- <div class="section-head"><div><div class="kicker">03 / WHAT I DO</div><h2>خدمات LOKO</h2></div></div>
+<section id="services" class="services section">
+ <div class="heading"><div><small>02 / SERVICES</small><h2>LOKO LAB</h2></div></div>
  <div class="service-grid">
-  <div class="service"><span>01</span><div class="service-icon">⌘</div><h3>Discord Bots</h3><p>بوتات قوية، أوامر مخصصة وأنظمة إدارة.</p><b>EXPLORE ↗</b></div>
-  <div class="service"><span>02</span><div class="service-icon">✦</div><h3>Intro Maker</h3><p>مقدمات مرئية بطابع سينمائي وهوية خاصة.</p><b>EXPLORE ↗</b></div>
-  <div class="service"><span>03</span><div class="service-icon">◈</div><h3>Web Projects</h3><p>واجهات عصرية وسريعة ومتجاوبة.</p><b>EXPLORE ↗</b></div>
+  <article><b>01</b><div class="icon">⌘</div><h3>Discord Bots</h3><p>بوتات، أوامر وأنظمة مخصصة لسيرفرك.</p></article>
+  <article><b>02</b><div class="icon">✦</div><h3>Intro Maker</h3><p>مقدمات مرئية بهوية LOKO وتأثيرات سينمائية.</p></article>
+  <article><b>03</b><div class="icon">◈</div><h3>Web Design</h3><p>مواقع حديثة، متجاوبة وسريعة.</p></article>
  </div>
 </section>
 
 <section id="kick" class="section kick">
- <div class="kick-card"><div class="kick-logo">KICK<span>•</span></div><div><div class="kicker">LIVE NOW / COMMUNITY</div><h2>تابع LOKO على Kick</h2><p>lkmxloko — المحتوى والبث في مكان واحد.</p></div><a href="https://kick.com/lkmxloko" target="_blank" class="kick-btn">VISIT CHANNEL ↗</a></div>
+ <div class="kick-design">
+  <div class="kick-orb"></div><div class="kick-mark">K</div>
+  <div class="kick-content"><small>LOKO LIVE CHANNEL</small><h2>lkmxloko</h2><p>تابع البث والمحتوى الجديد على Kick.</p><a href="https://kick.com/lkmxloko" target="_blank">زيارة القناة <b>↗</b></a></div>
+  <div class="kick-lines"></div>
+ </div>
 </section>
 
-<section id="discord" class="section discord">
- <div class="discord-card"><div class="discord-symbol">◉</div><div><div class="kicker">JOIN THE COMMUNITY</div><h2>جاهز تدخل عالم LOKO؟</h2><p>انضم إلى سيرفر Discord وخليك قريب من كل جديد.</p></div><a href="https://discord.gg/geBtewgb5" target="_blank" class="discord-btn">انضم الآن ↗</a></div>
+<section id="discord" class="section">
+ <div class="discord-design">
+  <div class="discord-icon">◉</div>
+  <div><small>LOKO COMMUNITY</small><h2>مكاننا على Discord</h2><p>انضم إلى المجتمع وتابع كل جديد.</p></div>
+  <a href="https://discord.gg/geBtewgb5" target="_blank">انضم الآن ↗</a>
+ </div>
 </section>
 
-<footer><div class="logo">LOKO<span>.</span></div><p>GAMING · COMMUNITY · CREATION</p><a href="#landing">↑ TOP</a></footer>
+<footer><div class="logo">LOKO<span>.</span></div><p>GAMING · COMMUNITY · CREATION</p></footer>
 </main>
 <script src="script.js"></script>
-</body></html>
+</body>
+</html>

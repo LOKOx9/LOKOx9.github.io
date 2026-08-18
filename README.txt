@@ -1,7 +1,10 @@
-LOKO PRO WEBSITE
-- Landing screen with animated LOKO logo.
-- No music.
-- Content appears only after pressing دخول.
+LOKO FINAL
+- لا توجد موسيقى.
+- المحتوى مخفي حتى الضغط على دخول.
+- روابط التحميل رسمية:
+CS2: https://store.steampowered.com/app/730/CounterStrike_2/
+VALORANT: https://playvalorant.com/ar-ae/download/
+Minecraft: https://www.minecraft.net/en-us/download
+Free Fire: https://ff.garena.com/en/
 - Kick: https://kick.com/lkmxloko
 - Discord: https://discord.gg/geBtewgb5
-- Game visuals are built-in stylized artwork, so no extra image downloads are required.
